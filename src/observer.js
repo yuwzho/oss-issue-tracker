@@ -28,7 +28,7 @@ class Observer {
             console.warn('You don\'t specific any labels, this will sync all the issues.');
         }
 
-        var query = labelQuery + 'is:open+user:' + this.repo.user + '+repo:' + this.repo.name;
+        var query = labelQuery + 'is:open+repo:' + this.repo.user + '/' + this.repo.name;
         var result = [];
         var total = 2, perPage = 100;
         for (var page = 1; page < total; page++) { /* github search is 1 index */
